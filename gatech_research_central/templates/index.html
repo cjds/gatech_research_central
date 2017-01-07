@@ -7,14 +7,14 @@
 	<div class="row">
         <div class="col-lg-12">
             <div class="page-header">
-			{% if latest_question_list %}
+			{% if study_list %}
     			<ul>
-    			{% for question in latest_question_list %}
-        			<li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    			{% for study in study_list %}
+        			<li><a href="/polls/{{ study.id }}/">{{ study.text }}</a></li>
     			{% endfor %}
     			</ul>
 			{% else %}
-    		<p>No polls are available.</p>
+    		<p>No studies are available.</p>
 			{% endif %}
 			</div>
 		</div>
