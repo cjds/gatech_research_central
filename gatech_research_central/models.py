@@ -1,13 +1,14 @@
 from django.db import models
 from django.utils import timezone
+from datetime import datetime, timedelta
 
 class Study(models.Model):
     #author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     text = models.TextField()
-    last_date=models.DateTimeField()
+    last_date=models.DateTimeField(default=timezone.now)
     created_date = models.DateTimeField(
-            default=timezone.now)
+            default=datetime.now()+timedelta(days=30))
     published_date = models.DateTimeField(
             blank=True, null=True)
 

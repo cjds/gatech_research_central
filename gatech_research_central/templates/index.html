@@ -10,7 +10,7 @@
 			{% if study_list %}
     			<ul>
     			{% for study in study_list %}
-        			<li><a href="/polls/{{ study.id }}/">{{ study.title }}</a></li>
+        			<li><a href="/study/{{ study.id }}/">{{ study.title }}</a></li>
     			{% endfor %}
     			</ul>
 			{% else %}

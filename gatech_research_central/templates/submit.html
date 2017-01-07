@@ -15,14 +15,14 @@
                     <label for="inputTitle" class="col-lg-2 control-label">Title:</label>
                     <div class="col-lg-10">
                       <span class="help-block">Describe your study in a few words</span>
-                      <input type="text" class="form-control" id="inputTitle" placeholder="eg. Study on Robotic">
+                      {{ form.title }}
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="textArea" class="col-lg-2 control-label">Text:</label>
                     <div class="col-lg-10">
                       <span class="help-block">Add information about the study including a link to sign-up, or another thing. We recommend <a href='http://doodle.com'>Doodle</a> for scheduling studies.</span>
-                      <textarea class="form-control" rows="3" id="textArea"></textarea>
+                      {{ form.text }}
                       
                     </div>
                   </div>
@@ -31,7 +31,7 @@
                     <div class="col-lg-10">
                       <span class="help-block">The last date that this study will be valid until. After that, we'll automatically stop listing it</span>
                         <div class="col-lg-5">
-                          <input type='date' id='date' class="form-control" />
+                          {{ form.last_date }}
                         </div>
                     </div>
                   </div>
