@@ -26,6 +26,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^submit/$', views.submit, name='submit'),
+    url(r'^study/(?P<study>\d+)/$', views.study, name='study'),
     url(r'^', views.index, name='index'),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT,show_indexes= True)
