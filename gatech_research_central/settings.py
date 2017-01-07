@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gatech_research_central'
 ]
 
 MIDDLEWARE_CLASSES = [
