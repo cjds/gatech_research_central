@@ -30,12 +30,13 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav">
-            <form class="navbar-form navbar-left" role="search">
+            <div class="navbar-form navbar-left" role="search">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
+                <input type="text" class="form-control" placeholder="Search" value="{{ search }}" id='searchbox'>
               </div>
-              <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-            </form>
+              <button  class="btn btn-default" id='search'>
+              <span class="glyphicon glyphicon-search" ></span></button>
+            </div>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -66,7 +67,7 @@
             <ul class="list-unstyled">
               <li><a href="#top">Back to top</a></li>
               <li><a href="https://github.com/cjds/gatech_research_central/">GitHub</a></li>
-              <li><a href="../help/#support">Support</a></li>
+              <li><a href="mailto:cjds@live.com">Support</a></li>
             </ul>
             <p>Made by <a href="http://carlsaldanha.com" rel="nofollow">Carl Saldanha</a>.
             </p>
@@ -81,5 +82,13 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="{% static "bower_components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
     {% block scripts %}{% endblock %}
+    <script type="text/javascript">
+        $(function () {
+            $('#search').click(function(ev){
+              ev.preventDefault();
+              window.location.href="http://"+window.location.host+"?search="+$("#searchbox").val();
+            })
+          });
+    </script>
   </body>
 </html>

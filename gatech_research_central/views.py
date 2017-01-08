@@ -9,6 +9,7 @@ def index(request):
     template = loader.get_template('index.html')
     context = {
         'study_list': study_list,
+        'search':request.GET.get('search',''), 
     }
     return HttpResponse(template.render(context, request))
 
