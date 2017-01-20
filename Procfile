@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: run-program waitress-serve --port=$PORT settings.wsgi:application
+web: gunicorn gatech_research_central.wsgi:application --log-file -
