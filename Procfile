@@ -1,1 +1,1 @@
-web: gunicorn gatech_reserch_central.wsgi --log-file -
+web: gunicorn gatech_reserch_central.wsgi:application --log-file -
