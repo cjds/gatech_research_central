@@ -1,5 +1,3 @@
-gatech_research_central/migrations/*.*
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
